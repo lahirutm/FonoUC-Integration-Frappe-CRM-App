@@ -1,0 +1,85 @@
+{
+  "actions": [],
+  "autoname": "field:pbx_user_id",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "pbx_user_id",
+    "pbx_user_name",
+    "column_break_1",
+    "pbx_extension",
+    "pbx_email",
+    "section_frappe",
+    "frappe_user",
+    "is_active"
+  ],
+  "fields": [
+    {
+      "fieldname": "pbx_user_id",
+      "fieldtype": "Data",
+      "label": "PBX User ID",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pbx_user_name",
+      "fieldtype": "Data",
+      "label": "PBX User Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "pbx_extension",
+      "fieldtype": "Data",
+      "label": "Extension",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pbx_email",
+      "fieldtype": "Data",
+      "label": "PBX Email"
+    },
+    {
+      "fieldname": "section_frappe",
+      "fieldtype": "Section Break",
+      "label": "Frappe CRM Mapping"
+    },
+    {
+      "fieldname": "frappe_user",
+      "fieldtype": "Link",
+      "label": "Frappe CRM User",
+      "options": "User",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Active",
+      "default": "1"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FonoUC Integration",
+  "name": "PBX Agent Mapping",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "pbx_user_name",
+  "sort_order": "ASC",
+  "title_field": "pbx_user_name",
+  "track_changes": 0
+}

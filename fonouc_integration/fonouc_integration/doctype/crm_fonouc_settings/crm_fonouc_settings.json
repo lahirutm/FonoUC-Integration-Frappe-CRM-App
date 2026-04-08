@@ -1,0 +1,123 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "enabled",
+    "pbx_url",
+    "column_break_1",
+    "account_id",
+    "section_auth",
+    "pbx_username",
+    "pbx_password",
+    "column_break_2",
+    "pbx_domain",
+    "api_key",
+    "section_webhook",
+    "webhook_secret",
+    "section_sip",
+    "sip_realm",
+    "wss_server"
+  ],
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "0",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pbx_url",
+      "fieldtype": "Data",
+      "label": "PBX Base URL",
+      "reqd": 1,
+      "description": "e.g. https://dialog.cybergate.lk:9443"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "account_id",
+      "fieldtype": "Data",
+      "label": "Account ID (X-Account-ID)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_auth",
+      "fieldtype": "Section Break",
+      "label": "Authentication"
+    },
+    {
+      "fieldname": "pbx_username",
+      "fieldtype": "Data",
+      "label": "PBX Username"
+    },
+    {
+      "fieldname": "pbx_password",
+      "fieldtype": "Password",
+      "label": "PBX Password"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "pbx_domain",
+      "fieldtype": "Data",
+      "label": "PBX Domain"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Password",
+      "label": "API Key"
+    },
+    {
+      "fieldname": "section_webhook",
+      "fieldtype": "Section Break",
+      "label": "Webhook"
+    },
+    {
+      "fieldname": "webhook_secret",
+      "fieldtype": "Data",
+      "label": "Webhook Verify Token",
+      "description": "Used to verify incoming webhook requests from FonoUC"
+    },
+    {
+      "fieldname": "section_sip",
+      "fieldtype": "Section Break",
+      "label": "SIP / WebRTC Settings"
+    },
+    {
+      "fieldname": "sip_realm",
+      "fieldtype": "Data",
+      "label": "SIP Realm",
+      "description": "e.g. cybergateissuetracker.sip.domain.com \u2014 find in PBX portal"
+    },
+    {
+      "fieldname": "wss_server",
+      "fieldtype": "Data",
+      "label": "WSS Server",
+      "default": "wss://dialog.cybergate.lk:5065",
+      "description": "WebSocket SIP server URL"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FonoUC Integration",
+  "name": "CRM FonoUC Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

@@ -1,0 +1,139 @@
+{
+  "actions": [],
+  "autoname": "field:campaign_name",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "campaign_name",
+    "pbx_campaign_id",
+    "column_break_1",
+    "is_active",
+    "last_sync",
+    "section_filter",
+    "lead_filter_status",
+    "lead_filter_source",
+    "column_break_2",
+    "lead_limit",
+    "section_mapping",
+    "number_field",
+    "first_name_field",
+    "column_break_3",
+    "last_name_field",
+    "notes_field"
+  ],
+  "fields": [
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name (in this CRM)",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pbx_campaign_id",
+      "fieldtype": "Data",
+      "label": "PBX Campaign ID",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Active",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "last_sync",
+      "fieldtype": "Datetime",
+      "label": "Last Sync",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_filter",
+      "fieldtype": "Section Break",
+      "label": "CRM Lead Filters"
+    },
+    {
+      "fieldname": "lead_filter_status",
+      "fieldtype": "Data",
+      "label": "Lead Status Filter",
+      "description": "Only sync leads with this status (leave blank for all)"
+    },
+    {
+      "fieldname": "lead_filter_source",
+      "fieldtype": "Data",
+      "label": "Lead Source Filter",
+      "description": "Only sync leads from this source (leave blank for all)"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "lead_limit",
+      "fieldtype": "Int",
+      "label": "Max Leads per Sync",
+      "default": "200"
+    },
+    {
+      "fieldname": "section_mapping",
+      "fieldtype": "Section Break",
+      "label": "Field Mapping (CRM Lead → PBX)"
+    },
+    {
+      "fieldname": "number_field",
+      "fieldtype": "Data",
+      "label": "Phone Field on CRM Lead",
+      "default": "mobile_no",
+      "reqd": 1
+    },
+    {
+      "fieldname": "first_name_field",
+      "fieldtype": "Data",
+      "label": "First Name Field",
+      "default": "first_name"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "last_name_field",
+      "fieldtype": "Data",
+      "label": "Last Name Field",
+      "default": "last_name"
+    },
+    {
+      "fieldname": "notes_field",
+      "fieldtype": "Data",
+      "label": "Notes Field",
+      "default": "notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FonoUC Integration",
+  "name": "PBX Campaign Link",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "campaign_name",
+  "sort_order": "ASC",
+  "title_field": "campaign_name",
+  "track_changes": 1
+}

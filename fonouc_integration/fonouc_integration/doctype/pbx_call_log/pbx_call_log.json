@@ -1,0 +1,211 @@
+{
+  "actions": [],
+  "autoname": "field:call_id",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "call_id",
+    "direction",
+    "status",
+    "column_break_1",
+    "call_datetime",
+    "duration",
+    "section_parties",
+    "caller_number",
+    "caller_name",
+    "column_break_2",
+    "called_number",
+    "agent_extension",
+    "agent_name",
+    "section_crm",
+    "linked_lead",
+    "linked_deal",
+    "linked_contact",
+    "column_break_3",
+    "frappe_user",
+    "queue_name",
+    "section_recording",
+    "has_recording",
+    "recording_id",
+    "recording_url",
+    "section_notes",
+    "disposition",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "call_id",
+      "fieldtype": "Data",
+      "label": "Call ID (CDR ID)",
+      "reqd": 1,
+      "in_list_view": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "direction",
+      "fieldtype": "Select",
+      "label": "Direction",
+      "options": "Inbound\nOutbound\nInternal",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Answered\nMissed\nVoicemail\nBusy\nFailed",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "call_datetime",
+      "fieldtype": "Datetime",
+      "label": "Call Date & Time",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "duration",
+      "fieldtype": "Int",
+      "label": "Duration (seconds)"
+    },
+    {
+      "fieldname": "section_parties",
+      "fieldtype": "Section Break",
+      "label": "Call Parties"
+    },
+    {
+      "fieldname": "caller_number",
+      "fieldtype": "Data",
+      "label": "Caller Number",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "caller_name",
+      "fieldtype": "Data",
+      "label": "Caller Name"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "called_number",
+      "fieldtype": "Data",
+      "label": "Called Number"
+    },
+    {
+      "fieldname": "agent_extension",
+      "fieldtype": "Data",
+      "label": "Agent Extension"
+    },
+    {
+      "fieldname": "agent_name",
+      "fieldtype": "Data",
+      "label": "Agent Name"
+    },
+    {
+      "fieldname": "section_crm",
+      "fieldtype": "Section Break",
+      "label": "CRM Links"
+    },
+    {
+      "fieldname": "linked_lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "CRM Lead"
+    },
+    {
+      "fieldname": "linked_deal",
+      "fieldtype": "Link",
+      "label": "Deal",
+      "options": "CRM Deal"
+    },
+    {
+      "fieldname": "linked_contact",
+      "fieldtype": "Link",
+      "label": "Contact",
+      "options": "Contact"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "frappe_user",
+      "fieldtype": "Link",
+      "label": "Frappe User (Agent)",
+      "options": "User"
+    },
+    {
+      "fieldname": "queue_name",
+      "fieldtype": "Data",
+      "label": "Queue"
+    },
+    {
+      "fieldname": "section_recording",
+      "fieldtype": "Section Break",
+      "label": "Call Recording"
+    },
+    {
+      "fieldname": "has_recording",
+      "fieldtype": "Check",
+      "label": "Has Recording"
+    },
+    {
+      "fieldname": "recording_id",
+      "fieldtype": "Data",
+      "label": "Recording ID",
+      "depends_on": "eval:doc.has_recording"
+    },
+    {
+      "fieldname": "recording_url",
+      "fieldtype": "Data",
+      "label": "Recording URL",
+      "depends_on": "eval:doc.has_recording"
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Disposition & Notes"
+    },
+    {
+      "fieldname": "disposition",
+      "fieldtype": "Data",
+      "label": "Disposition"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FonoUC Integration",
+  "name": "PBX Call Log",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "CRM User",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ],
+  "sort_field": "call_datetime",
+  "sort_order": "DESC",
+  "title_field": "call_id",
+  "track_changes": 0
+}

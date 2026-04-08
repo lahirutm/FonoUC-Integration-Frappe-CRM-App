@@ -1,0 +1,13 @@
+{
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "Page",
+  "module": "FonoUC Integration",
+  "name": "pbx-agent-status",
+  "page_name": "pbx-agent-status",
+  "standard": "Yes",
+  "title": "PBX Live Agent Status",
+  "roles": [
+    { "role": "System Manager" },
+    { "role": "CRM User" }
+  ]
+}
